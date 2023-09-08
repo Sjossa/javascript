@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+     var nombre =  Number(prompt("combien de note"))
+var totalnote = 0
+     if (isNaN(nombre) || nombre < 1) { 
+     alert('veuillez entre un nombre');
+    }
+    else {
+        for ( var a = 0; a < nombre ; a++){
+            var note = Number(prompt("entrez une note "+ (a+1) + ":"));
+            totalnote = totalnote + note ;
+        }
+        var resultat = totalnote/nombre
+        document.write(" la moyenne et de " + resultat )
+    }
+     </script>
+     <script>
+        valeur n = 0 
+        
+     </script>
+    
+</body>
+</html>
