@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>#btn{
+
+    background-color:
+    
+    red;
+    
+   
+    
+    border-radius: 50%;
+    
+    height:50px;
+    
+    width: 50px;
+    
+    position:relative;
+    
+    animation-name: rouge; animation-duration: 2s;
+    
+    animation-iteration-count: infinite; }
+    
+    @keyframes rouge {
+        
+        0%{left:0px; top:0px}
+    
+    25% {left:200px; top:0px}
+    
+    50%{left:200px; top:200px}
+    
+    75%{left:0px; top:200px}
+    
+    1000%{left:0px; top:0px} }
+    #btn2{
+
+background-color: purple; border-radius: 50%;
+
+height: 50px;
+
+width: 50px;
+
+position:relative;
+
+animation-name: purple;
+
+animation-duration: 2s; animation-iteration-count: infinite; }
+
+@keyframes purple{
+
+0%{left:0px;top:0px}
+
+25% {left:0px; top:200px}
+
+50% {left:200px; top:200px}
+
+75% {left:2000px; top: 0px} 
+100%{left:0px; top:0px}  }
+    
+    </style>
+<body>
+    <form action="">
+    <input type="text" id="text">
+    <input type="submit" >
+</form>
+
+</form>
+<button id="btn"></button>
+<button id="btn2"></button>
+<script>
+     let btn = document.getElementById("btn")
+     let compteur = 0;
+     btn.addEventListener('click',function(){
+        compteur = compteur + 1;
+        console.log(compteur,"bouton clické");
+     })
+
+     let btn2 = ddocument.getElementById("btn2");
+
+     btn2.addEventListener('click',function(){
+        compteur = compteur + 1;
+        console.log(compteur,"buton cliké");
+     })
+</script>
+    
+</body>
+</html>

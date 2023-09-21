@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="18.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <!-- Bouton permettant d'augmenter la taille de l'image. 
+         Lorsqu'il est cliqué, il déclenche la fonction "plus()" -->
+       <button onclick="plus()">Augmenter</button>
+
+        <!-- Bouton permettant de réduire la taille de l'image. 
+         Lorsqu'il est cliqué, il déclenche la fonction "moins()" -->
+        <button onclick="moins()">Réduire</button>
+
+        <!-- Image cible dont la taille sera modifiée par les boutons ci-dessus.
+         Le "width" initial est défini à "200px" -->
+         <img  id="cible"
+         src="res/1675444234843.png"
+         width="200px" alt="">
+
+         <button onclick="ecrireBonjour()">cliquez ici</button>
+         <div class="limite"><div id="bonjour"></div></div>
+         
+         
+    
+
+    </div>
+    
+
+    <!-- Script JavaScript pour la gestion de la modification de la taille de l'image -->
+
+    <script>
+        // Fonction permettant d'augmenter la largeur de l'image de 192 pixels
+        function plus() {
+            document.getElementById("cible").width += 50;
+        }
+
+        // Fonction permettant de réduire la largeur de l'image de 192 pixels
+        function moins() {
+            document.getElementById("cible").width -= 50;
+        }
+    </script>
+
+<script>
+        function ecrireBonjour() {
+            const element = document.getElementById('bonjour');
+            var num = 0;
+            for (let i = 0; i < 100; i++) {
+                num++;
+                element.innerHTML += 'bonjour ' + num + ' ';  // On utilise '<br>' pour passer à la ligne après chaque "bonjour"
+            }
+        }
+    </script>
+
+<div id="premier"  class="limite">
+    <script> // nombre premier//
+    /*
+    
+    const premier = document.getElementById('premier');
+
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.write(' FizzBuzz ');
+           
+        } else if (i % 3 === 0) {
+            document.write(' Fizz ');
+            
+        } else if (i % 5 === 0) {
+            document.write(' Buzz ');
+            
+        } else {
+            document.write(i + '');
+           
+        }
+        if (i < 100) {
+            document.write(' '); }
+    }
+}
+
+fizzBuzz();
+
+    
+    </script>
+    
+</body>
+</html>
