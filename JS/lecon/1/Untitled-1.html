@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh; }
+    </style>
+</head>
+<body onload="alert('Page chargée.')" >
+    
+    <input  type="button" value="bouton1" onclick="f()"/><br/>
+    <input  type="button" value="bouton 2" onmouseover="g()"/><br/>
+    <input  type="button" value= "bouton 3" ondblclick="h()"/><br/>
+    <input  type="button" value="bouton 4" onclick="j()"/><br/>
+    <input  type="button" value="bouton 5" onclick="popup()"/><br/>
+    <input  type="button" value="bouton 6" onclick="i()"/><br/>
+    <textarea onchange="alert('qu/ as-tu-ecris')"></textarea>
+    <input  type="submit"  onclick="f_submit()"/><br/>
+    
+
+    <script>
+        function f(){
+            alert("vous avez cliqué sur 1")
+        }
+        function g(){
+            alert("vous avez survolé sur 2")
+        }
+        function h(){
+            alert("vous avez cliqué sur 2 fois sur le boutton 3")
+        }
+        function j(){
+            document.body.style.background="red";
+        }
+        function popup(){
+            window.open("https://ww.google.fr")
+        }
+        function retarde(){
+            alert(" retarder l'execution de la fonction de 2 seconde ")
+        }
+        function i(){
+            setTimeout ( "retarde()",2000);
+        }
+        function f_submit(){
+            alert("vous avez soumis le boutton")
+        }
+    </script>
+
+    
+    
+</body>
+</html>

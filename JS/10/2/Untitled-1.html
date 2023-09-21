@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let tab = [10,25,35];
+/*
+ //parcours chaque élément du tableau
+for ( let i = 0; i < tab.length; i++){
+    let nombre = tab[i].toString(); // convertit l'élément en chaine de caractere
+
+//verifie si la chaine contien  "1"
+    if (nombre.includes('1')){
+
+        //si il y est suprimé 1
+        nombre = nombre.replace(/1/g, '');
+
+        //change la valeur
+        tab[i] = parseInt(nombre)
+    }
+ }
+*/
+//ajoute 12
+tab.push(12)
+//Supprimer la valeur d'index 1 (la deuxième valeur)
+tab.splice (1,  1);
+
+ console.log(tab);
+    </script>
+</body>
+</html>

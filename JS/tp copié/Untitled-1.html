@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="page">
+        <a id="affichage">TP-15</a>
+        <a id="resultat"></a>
+        <input type="button" onClick="somme()"  value="1-Calcul de la somme de 2 Nbres"/>
+        <input type="button" onClick="convertir()" value="2-Convertir en secondes"/>
+        <input type="button" onClick="incrementation()" value="3-incrémentation de 1"/>
+        <input type="button" onClick="airtriangle() "  value="4-Surface d'un triangle Rectangle"/>
+        <input type="button" onClick="inverse() "  value="5-Inverse l ordre des lettres"/>
+        <input type="button" onClick="leplusgrand() "  value="6-Le plus grand des 3"/>
+        <input type="button" onClick="premierdutableau() "  value="7-Le premier du tableau"/>
+        <input type="button" onClick="urldusite() "  value="8-Adresse du site"/>
+        <input type="button" onClick="modulo() "  value="9-modulo"/>
+    </div>
+
+<style>
+    
+* {margin: 0;
+    padding:0;}
+body{
+    display:flex;
+    justify-content: center;
+
+}
+#page{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    margin-top: 1vh;
+    border-radius:15px;
+    background-color: rgb(201, 201, 201);
+}
+a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    border-radius: 10px;
+    background-color: rgb(0, 130, 190);
+    color:white;
+    margin:3px;
+    width: 350px;
+    height:35px;
+    font-size: 20px;
+}
+#page input:hover{
+    background-color: rgb(0, 174, 255);
+}
+
+#affichage{
+    border:solid 4px rgb(0, 110, 110);
+    background-color: rgb(0, 201, 201);
+    border-radius: 10px;
+    width: 250px;
+    height:30px;
+    font-size: 35px;
+	padding-top:10px;
+	padding-bottom:10px;    
+  
+}
+
+#resultat{
+    border:solid 4px rgb(201, 201, 201,100);
+    width: 350px;
+    height:40px;
+    font-size: 20px;
+    color:rgb(0, 141, 19);
+    font-weight: bold;
+}
+
+    </style>
+
+<script>
+
+    function somme(a,b){ 
+        var a=Number(prompt("Nombre 1 : "));
+        var b=Number(prompt("Nombre 2 : "));
+        resultat=Number(a+b);
+        document.getElementById("resultat").innerHTML = "Somme = " + resultat + "";
+    }
+  
+    function convertir(a){
+        var a=Number(prompt("Valeur en minute(s) : "));
+        let resultat=Number(a*60);
+        document.getElementById("resultat").innerHTML = resultat + " secondes";
+       
+    }
+
+    function incrementation(a){
+        var a=Number(prompt("Valeur : "));
+        let resultat=Number(a+1);
+        document.getElementById("resultat").innerHTML = "Résultat = " + resultat;
+    }
+    
+    function airtriangle(a,b){ 
+        var a=Number(prompt("Longueur : "));
+        var b=Number(prompt("Hauteur : "));
+        resultat=Number((a*b)/2);
+        document.getElementById("resultat").innerHTML = "Surface du triangle = " + resultat + " mm2";
+    }
+
+    function inverse(a){ 
+        var a=(prompt("Votre Mot : "));
+        let resultat= (a.split('').reverse('').join(''));
+        document.getElementById("resultat").innerHTML = a + " : Résultat inversée = " + resultat;
+    }
+
+    function leplusgrand(a,b,c){
+        var a=Number(prompt("Longueur : "));
+        var b=Number(prompt("Hauteur : "));
+        var c=Number(prompt("Longueur : "));
+        if(Number(a>b)){
+            document.getElementById("resultat").innerHTML = "Le plus grand est = " + a;}
+            else if(Number(c>b)){
+            document.getElementById("resultat").innerHTML = "Le plus grand est = " + c;}
+        else{
+            document.getElementById("resultat").innerHTML = "Le plus grand est = " + b;}
+        }
+
+        function premierdutableau(a){ 
+        a=["T1","T2","T3","T4","T5"];
+        let resultat= a[0];
+        document.getElementById("resultat").innerHTML = "Premier élément du tableau = " + resultat;
+         }
+
+         function urldusite(a){ 
+        var a=(prompt("Nom du site : "));
+        document.getElementById("resultat").innerHTML = "L'URL de cette page est: " + window.location.href;
+    }
+    function modulo(a,b){ 
+        var a=(prompt("Dividente : "));
+        //tester si valeure numérique
+        if(a>0){
+        var b=(prompt("Diviseur : "));
+        }if(b>0){
+        let resultat=(a%b);
+        let c=(a/b);
+        document.getElementById("resultat").innerHTML = "Le résultat est : "+c.toFixed(2)+"- Le reste est :"+resultat;
+    
+        }else{
+            document.getElementById("resultat").innerHTML = "Entrez un Nombre";
+           
+        }
+    }
+
+</script>
+  
+</body>
+</html>

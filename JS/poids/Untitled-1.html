@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="exer1"><h1> exercise 1</h1></div>
+
+    <script>/*
+        let poids = Number(prompt("indiquez votre poids"))
+        let taille = Number(prompt("indiquez votre taille"))
+        let calcul = taille * taille
+        let resultat = poids / calcul
+        document.write( "votre imc est de " + resultat )*/
+    </script>
+<div class="exer2"><h2>exercise 2</h2></div>
+<script> 
+let point = Number(prompt("veuillez indiquez le nombre de points"));
+//carre or rectangle//
+function carreORrectangle() {
+if ( point === 4 ){ 
+let cote = Number(prompt(" combien y'a til de  coté la meme longeur "));
+if  (cote === 2) { 
+  document.write("la forme geometrique est un rectangle");} 
+  else if(cote === 4){ document.write( "la form egeometrique est un carre"); }
+else { document.write (" la forme n'est pas un carre o un rectangle") ;}}}
+carreORrectangle()
+
+function triangle() {
+    if (point === 3) {
+        let cote = prompt("Dispose-t'elle d'un angle droit ?");
+
+        if (cote === "oui") {
+            document.write("La forme géométrique est un triangle rectangle");
+        } else if (cote === "non") {
+            let egaux = prompt("Est-ce que deux côtés sont égaux ?");
+            
+            if (egaux === "oui") {
+                document.write("C'est un triangle isocèle");
+            } else if (egaux === "non") {
+                document.write("C'est un triangle équilatéral");
+            } else {
+                document.write("Réponse invalide pour deux côtés égaux");
+            }
+        } else {
+            document.write("Réponse invalide pour un angle droit");
+        }
+    } else {
+        document.write("Réponse invalide pour le nombre de points");
+    }
+}
+triangle();
+
+
+ 
+ 
+ 
+     </script>
+    
+</body>
+</html>

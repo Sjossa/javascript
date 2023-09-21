@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres Premiers</title>
+</head>
+<body>
+    <div id="lol"></div>
+    <script>
+        function premier(nombre) {
+            if (nombre <= 1) return false; // elle verifie si le nombre est inferieur ou egal
+            if (nombre <= 3) return true;// elle verifie si le nombre est egal a 2 ou 3
+
+            if (nombre % 2 === 0 || nombre % 3 === 0) return false; // verifie si divible par 2 ou 3
+
+            for (let i = 5; i * i <= nombre; i += 6) {
+                if (nombre % i === 0 || nombre % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+        let i = 1; // itere a travers nes nombre de 1 a 100
+
+        while (i <= 100) //permet de parcourir les nomde jusqua 100
+        {
+            if (premier(i))//on check si  le nombre est premier en l'appelant premier(i)
+            {
+                const paragraphe = document.createElement('p');
+                paragraphe.textContent = `${i}`;
+                document.getElementById('lol').appendChild(paragraphe);
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>

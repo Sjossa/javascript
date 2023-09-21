@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Définition de la fonction remplirTableauAleatoire
+        function remplirTableauAleatoire(tableau, nombreDeValeurs, min, max) {
+          // Début de la boucle qui va générer les valeurs aléatoires
+          for (let i = 0; i < nombreDeValeurs; i++) {
+            // Génère une valeur aléatoire entre min (inclus) et max (inclus)
+            const valeurAleatoire = Math.floor(Math.random() * (max - min + 1)) + min;
+            // Ajoute la valeur aléatoire au tableau
+            tableau.push(valeurAleatoire);
+          }
+          // Fin de la fonction
+        }
+
+        // Crée un tableau vide pour stocker les valeurs aléatoires
+        const tableauAleatoire = [];
+
+        // Appelle la fonction remplirTableauAleatoire en lui passant le tableau, le nombre de valeurs souhaitées (1000), min (1) et max (1000)
+        remplirTableauAleatoire(tableauAleatoire, 1000, 1, 500);
+
+        // Affiche le tableau résultant dans la console
+        console.log(tableauAleatoire);
+    </script>
+</body>
+</html>

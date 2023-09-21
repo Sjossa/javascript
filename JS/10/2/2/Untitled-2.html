@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="CARRE.css"   >
+    <title>Calculs Géométriques</title>
+</head>
+<body>
+    <h1>Calculs Géométriques</h1>
+    
+    <!-- Calcul de l'aire d'un triangle -->
+    <h2>Calcul de l'aire d'un triangle</h2>
+    <input type="button" onclick="calculerAireTriangle()" value="Calculer l'aire du triangle"></div>
+    
+    
+    <!-- Calcul de l'aire d'un rectangle -->
+    <h2>Calcul de l'aire d'un rectangle</h2>
+    <input type="button" onclick="calculerAireRectangle()" value="Calculer l'aire du rectangle">
+    
+    <!-- Calcul de l'aire d'un carré -->
+    <h2>Calcul de l'aire d'un carré</h2>
+    <input type="button" onclick="calculerAireCarre()" value="Calculer l'aire du carré">
+    
+    <!-- Calcul du volume d'un cube -->
+    <h2>Calcul du volume d'un cube</h2>
+    <input type="button" onclick="calculerVolumeCube()" value="Calculer le volume du cube">
+    
+    <script>
+        // Fonction pour calculer l'aire d'un triangle
+        function calculerAireTriangle() {
+            var base = prompt("Longueur de la base du triangle : ");
+            var hauteur = prompt("Hauteur du triangle : ");
+            var aire = (Number(base) * Number(hauteur)) / 2;
+            alert("L'aire du triangle est : " + aire);
+        }
+
+        // Fonction pour calculer l'aire d'un rectangle
+        function calculerAireRectangle() {
+            var longueur = prompt("Longueur du rectangle : ");
+            var largeur = prompt("Largeur du rectangle : ");
+            var aire = Number(longueur) * Number(largeur);
+            alert("L'aire du rectangle est : " + aire);
+        }
+
+        // Fonction pour calculer l'aire d'un carré
+        function calculerAireCarre() {
+            var cote = prompt("Longueur du côté du carré : ");
+            var aire = Number(cote) * Number(cote);
+            alert("L'aire du carré est : " + aire);
+        }
+
+        // Fonction pour calculer le volume d'un cube
+        function calculerVolumeCube() {
+            var cote = prompt("Longueur du côté du cube : ");
+            var volume = Number(cote) * Number(cote) * Number(cote);
+            alert("Le volume du cube est : " + volume);
+        }
+    </script>
+</body>
+</html>
+

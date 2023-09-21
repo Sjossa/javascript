@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="17.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="numero">
+        <div class="decompte">1</div>
+        <div class="decompte">2</div>
+        <div class="decompte">3</div>
+        <div class="decompte">lancement</div>
+    </div>
+
+    <!-- Bouton pour lancer le décompte -->
+    <button id="startDecompte">Lancer le décompte</button>
+
+    <script>
+        let temps = 0;
+        let intervalID;
+
+        function decompte() {
+            let i;
+            let x = document.getElementsByClassName("decompte");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            temps++;
+            if (temps > x.length) {
+                clearInterval(intervalID);
+                for (i = 0; i < x.length; i++) { 
+                    x[i].style.display = "none";
+                }  
+            } else {
+                x[temps - 1].style.display = "block";
+            }
+        }
+
+        // Fonction pour lancer le décompte
+        document.getElementById("startDecompte").addEventListener("click", function () {
+            temps = 0; // Réinitialise le temps
+            clearInterval(intervalID); // Arrête l'ancienne intervalle s'il y en avait une
+            intervalID = setInterval(decompte, 2000);
+        });
+    </script>
+
+    <!-- Bouton pour lancer le jeu -->
+    <button id="startGame">Jouer au jeu</button>
+
+    <script>
+        // Fonction pour lancer le jeu
+        document.getElementById("startGame").addEventListener("click", function () {
+            // Générer un nombre aléatoire entre 0 (inclus) et 1 (exclus)
+            let nombreAleatoire = Math.random();
+
+            // Mettre à l'échelle le nombre aléatoire pour qu'il soit entre 0 et 10
+            let nombreEntre0et10 = Math.floor(nombreAleatoire * 11);
+
+            let val = confirm("Voulez-vous jouer un jeu ?");
+
+            if (val) {
+                val = confirm("Voulez-vous connaître les règles du jeu ?");
+                alert("L'utilisateur doit deviner un nombre entre 0 et 10 en un minimum de coups.");
+                while (val) {
+                    let resultat = Number(prompt("Veuillez rentrer un nombre"));
+
+                    if (resultat === nombreEntre0et10) {
+                        alert("Bravo, vous avez trouvé !");
+                        break; // Sort de la boucle si la réponse est correcte
+                    } else {
+                        alert("Faux. Essayez à nouveau.");
+                    }
+
+                    val = confirm("Voulez-vous rejouer ?");
+                }
+            } else {
+                document.write("Le jeu n'a pas été démarré.");
+            }
+        });
+    </script>
+
+    <!-- Bouton pour ouvrir une nouvelle fenêtre -->
+    <button id="openNewWindow">Ouvrir une nouvelle fenêtre</button>
+
+    <script>
+        // Fonction pour ouvrir une nouvelle fenêtre
+        document.getElementById("openNewWindow").addEventListener("click", function () {
+            const nouvelleFenetre = window.open('', '_blank', 'width=100,height=100,top=0,left=0,scrollbars=no');
+            nouvelleFenetre.document.write('<html><head><title>Nouvelle Fenêtre</title><style> body { background-color:red  } </style></head><body><h1>Contenu de la nouvelle fenêtre</h1></body></html>');
+            setTimeout(function () {
+                nouvelleFenetre.close();
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>

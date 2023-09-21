@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*
+        let machine = "le reveil n'a pas bien fonctionné ce matin !" ;
+        console.log("taile de la chaine " + machine.length);
+        console.log(machine.charAt(0));
+        console.log(machine.indexOf("o"));
+        console.log(machine.substring(0,  3));//permet d'extraire une partie de la chaine  de caractère commençant de la position début et finisant à la position fin -1
+        
+
+        
+       console.log(machine.split("o"));
+       let maVar = machine.split("o");
+       console.log(maVar.lenght);
+      console.log(maVar.join("-"));
+      console.table(maVar)
+      console.log(machine.toLowerCase());
+      console.log(machine.toUpperCase());
+
+    */</script>
+
+    <script>
+        function affichier(){
+            alert("bonjour");
+        } 
+        affichier();
+        function direBonjour(nom){
+            alert("bonjour" + nom);
+        }
+        direBonjour(" Annisa");
+
+
+        function identiter(nom, age){ 
+            alert("bonjour" + nom+ "ton age est" + age );
+
+
+        }
+
+        identiter(" Annisa" , 12);
+
+        function demanderIdentiter(nom, age){
+            nom = prompt("entrez le nom");
+            age = prompt("entrez l'age");
+
+            alert("votre nom est : "+nom+ "votre age est : " + age );
+
+        }
+        demanderIdentiter();
+    </script>
+
+</body>
+</html>

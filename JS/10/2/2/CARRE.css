@@ -1,0 +1,11 @@
+body{background-color: aqua;}
+h1{text-align: center;}
+input{
+    display: block;
+    position: relative;
+    top: -5vh;
+ color: rgb(240, 128, 128);
+    margin: 2px auto;
+    padding: 10px 10px;
+    text-align: center;
+}

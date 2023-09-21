@@ -1,0 +1,61 @@
+/* Réinitialisation des marges et des rembourrages */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de fond de la page */
+body {
+    background-color: #ee2d2d; /* Couleur de fond légère */
+    color: #333; /* Couleur du texte principale */
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+}
+
+/* Style de l'en-tête */
+h1 {
+    font-size: 36px; /* Taille de la police pour les titres */
+    margin-bottom: 20px; /* Marge en bas du titre */
+    color: #007aff; /* Couleur du titre */
+}
+
+/* Style pour la classe "numero" */
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la section en vue 100% de la hauteur de la fenêtre */
+}
+
+/* Style pour la classe "decompte" */
+.decompte {
+    font-size: 48px; /* Taille de la police pour les chiffres */
+    margin: 0 20px; /* Marge autour des chiffres */
+    padding: 10px 20px; /* Rembourrage des chiffres */
+    background-color: #007aff; /* Couleur de fond pour les chiffres */
+    color: #ffffff; /* Couleur du texte pour les chiffres */
+    border-radius: 50%; /* Forme de cercle pour les chiffres */
+    display: none; /* Masque les chiffres au départ */
+}
+
+/* Style pour les boutons */
+button {
+    background-color: #007aff; /* Couleur de fond des boutons */
+    color: #ffffff; /* Couleur du texte des boutons */
+    border: none; /* Supprimer les bordures des boutons */
+    padding: 10px 20px; /* Rembourrage des boutons */
+    font-size: 18px; /* Taille de la police des boutons */
+    cursor: pointer; /* Curseur de la main au survol des boutons */
+    margin: 10px; /* Marge autour des boutons */
+    border-radius: 5px; /* Coins arrondis pour les boutons */
+}
+
+/* Style pour les liens */
+a {
+    color: #007aff; /* Couleur des liens */
+    text-decoration: none; /* Supprimer les soulignements des liens */
+}
+
+/* Style pour les liens au survol */
+a:hover {
+    text-decoration: underline; /* Soulignement au survol des liens */
+}
